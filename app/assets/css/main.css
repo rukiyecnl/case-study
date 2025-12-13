@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-.firstHeader{
-    background-color: #505357;
+.container{
+    @apply  px-[10px] mx-auto lg:px-[80px];
+}
+
+.useGradiant{
+    background: linear-gradient(0deg, #F2F0FF, #F2F0FF),
+                linear-gradient(163.21deg, #F2F0FF 9.01%, 
+                rgba(251, 251, 255, 0.77) 26.47%,
+                 rgba(255, 255, 255, 0.72) 52.19%, #F2F0FF 67.81%);
+
 }

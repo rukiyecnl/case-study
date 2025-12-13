@@ -2,26 +2,30 @@
     import book from '~/assets/images/book.png'
     import store from '~/assets/images/store.png'
     import phone from '~/assets/images/phone.png'
+    import HeaderActionVue from '../ui/HeaderAction.vue';
 </script>
 
 <template>
-  <header class="firstHeader sticky top-0 z-50 bg-white border-b">
-    <div class="flex items-center justify-between px-4 h-14">
-        <div class="flex item-center justify-center">
-            <button class="flex item-center justify-center">
-                <img :src="store" alt="Cart" class="w-[18px] h-[14px]" />
-                <p class="stores">Stores</p>
-            </button>
-            
-            <button class="flex item-center justify-center">
-                <img :src="book" alt="Logo" class="w-[18px] h-[14px]" />
-                <p>Catalog</p>
+  <header class="bg-[#505357] sticky top-0 py-2 z-50  border-b">
+    <div class="container flex justify-between px-6">
+        <div class="flex justify-center gap-10">
+            <HeaderActionVue :icon="store">Stores</HeaderActionVue>
+            <HeaderActionVue :icon="book">Catalog</HeaderActionVue>
+        </div>
+
+        <span class="hidden lg:inline text-sm text-[#ECECEC80] text-center">
+            Watsons Beauty and Personal Care Awards Nominees!
+        </span>
+
+        <div class="flex items-center gap-2">
+            <span class="hidden lg:inline text-sm text-white text-center">
+                Call us:(+90) 850 123 45 67
+            </span>
+            <button >
+                <img :src="phone" alt="Menu" class="w-[18px] h-[18px]" />
             </button>
         </div>
 
-        <button >
-            <img :src="phone" alt="Menu" class="w-[18px] h-[14px]" />
-        </button>
     </div>
   </header>
 </template>

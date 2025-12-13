@@ -7,7 +7,14 @@ export default {
     './app.vue',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Roboto', 'sans-serif'],
+      },
+      fontSize: {
+        'body-sm': ['14px', { lineHeight: '24px' }],
+      },
+    },
   },
   plugins: [],
 };

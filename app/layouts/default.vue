@@ -1,9 +1,16 @@
+<script setup lang="ts">
+import  Deneme2Vue from '~/components/layout/Deneme2.vue';
+import HeaderSearchVue from '~/components/layout/HeaderSearch.vue';
+
+</script>
+
 
 <template>
   <div class="min-h-screen flex flex-col">
     <LayoutHeader />
+    
+    <HeaderSearchVue />
 
-    <p class="text-red-600">layout</p>
     <main class="flex-1">
       <slot />
     </main>
