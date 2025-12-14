@@ -2,15 +2,15 @@
     import book from '~/assets/images/book.png'
     import store from '~/assets/images/store.png'
     import phone from '~/assets/images/phone.png'
-    import HeaderActionVue from '../ui/HeaderAction.vue';
+    import ButtonWithIconVue from '../ui/ButtonWithIcon.vue';
 </script>
 
 <template>
   <header class="bg-[#505357] sticky top-0 py-2 z-50  border-b">
     <div class="container flex justify-between px-6">
         <div class="flex justify-center gap-10">
-            <HeaderActionVue :icon="store">Stores</HeaderActionVue>
-            <HeaderActionVue :icon="book">Catalog</HeaderActionVue>
+            <ButtonWithIconVue :icon="store">Stores</ButtonWithIconVue>
+            <ButtonWithIconVue :icon="book">Catalog</ButtonWithIconVue>
         </div>
 
         <span class="hidden lg:inline text-sm text-[#ECECEC80] text-center">

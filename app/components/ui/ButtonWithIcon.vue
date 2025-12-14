@@ -3,9 +3,9 @@
 </script>
 
 <template>
-  <button class="header-action">
+  <button class="header-action" :class="[$attrs.class]">
     <img :src="icon" class="w-[18px] h-[18px]" />
-    <span class="header-action__text">
+    <span class="header-action__text"> 
       <slot />
     </span>
   </button>
