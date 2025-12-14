@@ -6,7 +6,7 @@
 </script>
 
 <template>
-  <header class="bg-[#505357] sticky top-0 py-2 z-50  border-b">
+  <header class="bg-[#505357] top-0 py-2 z-50  border-b">
     <div class="container flex justify-between px-6">
         <div class="flex justify-center gap-10">
             <ButtonWithIconVue :icon="store">Stores</ButtonWithIconVue>

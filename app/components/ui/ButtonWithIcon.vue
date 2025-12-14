@@ -4,7 +4,7 @@
 
 <template>
   <button class="header-action" :class="[$attrs.class]">
-    <img :src="icon" class="w-[18px] h-[18px]" />
+    <img :src="icon" class="w-[17px] h-[15px]" />
     <span class="header-action__text"> 
       <slot />
     </span>
@@ -18,6 +18,6 @@
         @apply flex items-center gap-2;
     }
     .header-action__text {
-        @apply font-sans text-lg text-white;
+        @apply font-sans text-[14px] text-white;
     }
 </style>
