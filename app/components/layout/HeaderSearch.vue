@@ -4,6 +4,8 @@
     import basket from '~/assets/images/basket.png'
     import hamburgerMenu from '~/assets/images/hamburgerMenu.png'
     import MenuModalVue from '../ui/MenuModal.vue'
+    import downArrow from '~/assets/images/down.svg'
+    import image from '~/assets/images/image.png'
     import { ref } from 'vue'
 
     const isOpen = ref(false)
@@ -11,9 +13,12 @@
 
 <template>
     <div class="container py-[22px] flex justify-between items-center">
-        <img class="w-[120px] h-[24px] lg:w-[146px] lg:h-[28px]" :src="logo" alt="">
 
-        <div class="flex gap-8 items-center">
+        <NuxtLink to="/">
+            <img class="w-[120px] h-[24px] lg:w-[146px] lg:h-[28px]" :src="logo" alt="">
+        </NuxtLink>
+
+        <div class="flex gap-4 items-center">
             <!-- Mobile: search icon -->
             <button class="md:hidden">
                 <img :src="search" alt="Search" />
@@ -21,7 +26,7 @@
 
 
             <!-- Desktop: search input -->
-            <div class="hidden md:flex gap-2 items-center border-none rounded-full px-3 py-3 text-sm bg-[#ECECEC4D]">
+            <div class="hidden md:flex gap-2 items-center border-none rounded-full ml-3 px-3 py-3 text-sm bg-[#ECECEC4D]">
                 <img :src="search" alt="" class="opacity-30 w-[16px] h-[16px]">
                 <input
                     type="text"
@@ -30,11 +35,22 @@
                 />
             </div>
 
-            <p class="hidden md:block"><span class="text-[#8493A8]">Hello,</span><span> Clara Clara</span></p>
+            <div class="hidden md:flex justify-between items-center gap-4">
+                <div class="md:block text-center">
+                    <span class="text-[#8493A8]">Hello,</span>
+                    <span> Clara Clara</span>
+                </div>
+                <div class="flex justify-center items-center gap-4 border-r-[1px] pr-[16px]">
+                    <img :src="image" alt="">
+                    <button>
+                        <img :src="downArrow" alt="">
+                    </button>
+                </div>
+            </div>
 
-            <button>
+            <NuxtLink to="/checkout">
                 <img :src="basket" alt="">
-            </button>
+            </NuxtLink>
 
             <button @click="isOpen = true"  class="md:hidden cursor-pointer">
                 <img :src="hamburgerMenu" alt="">
