@@ -33,7 +33,7 @@
                                 <p class="text-[#2A2A48] font-bold sm:text-[24px] lg:text-[34px] ">{{ slide.collection }}</p>
                             </div>
                             <p class="text-[#485363] text-[16px] lg:mb-5">{{ slide.description }}</p>
-                            <ButtonVue size="sm">SHOP NOW</ButtonVue>
+                            <ButtonVue size="sm" color="pink">SHOP NOW</ButtonVue>
                         </div>
                     </div>
                 </SplideSlide>

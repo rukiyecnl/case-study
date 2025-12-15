@@ -1,5 +1,10 @@
 <script setup lang="ts">
-    defineProps<{ icon: string }>()
+    const props = defineProps({
+        icon: {
+          type: String,
+          required: true,
+        },
+    })
 </script>
 
 <template>

@@ -5,6 +5,7 @@
     import NewsLetterSignUpVue from '~/components/ui/NewsLetterSignUp.vue';
     import mobileBanner from "~/assets/images/mobileBanner.png"
     import desktopBanner from "~/assets/images/desktopBanner.png"
+    import FeaturedCategoriesVue from '~/components/ui/FeaturedCategories.vue';
 
     definePageMeta({
         layout: 'default'
@@ -25,11 +26,7 @@
                 <img class="w-full" :src="desktopBanner" alt="">
             </a>
         </div>
-        <div class="py-[16px]">
-            <FeaturedTitleActionVue>Featured Categories</FeaturedTitleActionVue>
-
-        </div>
-
+        <FeaturedCategoriesVue />
     </div>
 
 

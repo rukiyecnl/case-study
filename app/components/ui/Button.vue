@@ -1,15 +1,20 @@
 <script setup lang="ts">
     type Size = 'sm' | 'md' | 'lg'
+    type Color = 'pink' |  'green'
 
     defineProps<{
         size?: Size
+        color?: Color
     }>()
 </script>
 
 <template>
     <button
         class="btn"
-        :class="size && `btn--${size}`"
+        :class="{
+            [`btn--${size}`]: size,
+            [`btn--${color}`]: color
+        }"
     >
         <slot />
     </button>
@@ -17,18 +22,26 @@
 
 <style scoped>
     .btn {
-    @apply bg-[#FF27AD] text-white rounded-[4px] font-[700] text-[14px] transition;
+        @apply text-white rounded-[4px] font-[700] text-[14px] transition;
     }
 
     .btn--sm {
-    @apply px-[16px] py-[8px] text-sm;
+        @apply px-[16px] py-[8px] text-sm;
     }
 
     .btn--md {
-    @apply px-[28px] py-[16px];
+        @apply px-[28px] py-[16px];
     }
 
     .btn--lg {
-    @apply px-6 py-4 text-lg;
+        @apply px-6 py-4 text-lg;
+    }
+
+    .btn--pink {
+        @apply bg-[#FF27AD]
+    }
+
+    .btn--green {
+        @apply bg-[#0099A8]
     }
 </style>

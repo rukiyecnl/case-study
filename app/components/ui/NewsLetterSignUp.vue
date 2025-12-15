@@ -11,7 +11,7 @@
             </div>
             <div class="flex gap-[16px]">
                 <input class="bg-white flex-1 px-[16px] py-[12px] rounded-[4px] lg:w-[412px]" type="text" placeholder="Your email address">
-                <ButtonVue size="md">SUBSCRIBE</ButtonVue>
+                <ButtonVue size="md" color="pink">SUBSCRIBE</ButtonVue>
             </div>
         </div>
     </div>
