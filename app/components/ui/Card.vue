@@ -27,7 +27,7 @@
                     <div class="md:hidden flex justify-center border-t-2 border-[#ECECEC80]">
                         <ButtonWithIconVue 
                             :icon="basketWhite" 
-                            class="bg-[#FF27AD] m-[16px] text-center py-[8px] px-[40px] rounded-[4px]"
+                            class="bg-[#FF27AD] m-[16px] py-[8px] px-[40px] rounded-[4px]"
                         >
                             ADD
                         </ButtonWithIconVue>

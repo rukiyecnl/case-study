@@ -8,9 +8,9 @@
 </script>
 
 <template>
-  <button class="header-action" :class="[$attrs.class]">
+  <button class="btn-action" :class="[$attrs.class]">
     <img :src="icon" class="w-[17px] h-[15px]" />
-    <span class="header-action__text"> 
+    <span class="btn-action__text"> 
       <slot />
     </span>
   </button>
@@ -19,10 +19,10 @@
 
 
 <style scoped>
-    .header-action {
+    .btn-action {
         @apply flex items-center gap-2;
     }
-    .header-action__text {
+    .btn-action__text {
         @apply font-sans text-[14px] text-white;
     }
 </style>

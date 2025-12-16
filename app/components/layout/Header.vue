@@ -9,8 +9,8 @@
   <header class="bg-[#505357] top-0 py-2 z-50  border-b">
     <div class="container flex justify-between px-6">
         <div class="flex justify-center gap-10">
-            <ButtonWithIconVue :icon="store">Stores</ButtonWithIconVue>
-            <ButtonWithIconVue :icon="book">Catalog</ButtonWithIconVue>
+            <ButtonWithIconVue :icon="store" >Stores</ButtonWithIconVue>
+            <ButtonWithIconVue :icon="book" >Catalog</ButtonWithIconVue>
         </div>
 
         <span class="hidden lg:inline text-sm text-[#ECECEC80] text-center">

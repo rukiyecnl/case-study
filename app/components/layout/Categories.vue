@@ -9,7 +9,7 @@
            v-for="category in categories"
            class="font-[700] xl:text-[14px] md:text-[12px] text-[#2A2A48] xl:p-[16px] md:p-[5px] cursor-pointer"
         >
-            {{ category.toUpperCase() }}
+            {{ category.title.toUpperCase() }}
         </a>
     </div>
 </template>
