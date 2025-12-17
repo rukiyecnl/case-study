@@ -1,13 +1,28 @@
-<script setup>  
+<script setup>
     import basketWhite from '~/assets/images/basketWhite.png'
-    import ButtonWithIconVue from '~/components/ui/ButtonWithIcon.vue';
     import view from '~/assets/images/view.png'
+    import ButtonWithIconVue from '~/components/ui/ButtonWithIcon.vue'
+    import SpinnerVue from './Spinner.vue'
 
-    const { data, pending, error } = await useProducts();
-    
-  
+    defineProps({
+        basket: {
+            type: Array,
+            required: true
+        }
+    })
+
+    const emit = defineEmits(['add-basket'])
+
+    const { data, pending } = await useProducts()
+    const loading = ref(true) 
+    if (data) { loading.value = false }
+
+    const addBasket = (product) => {
+        emit('add-basket', product)
+    }
 </script>
 <template>
+        <SpinnerVue v-if="loading" />
         <div class="container" v-if="data?.products">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-[16px] mb-[16px]">
                 <div
@@ -26,6 +41,7 @@
                     </div>
                     <div class="md:hidden flex justify-center border-t-2 border-[#ECECEC80]">
                         <ButtonWithIconVue 
+                            @click="addBasket(product)"
                             :icon="basketWhite" 
                             class="bg-[#FF27AD] m-[16px] py-[8px] px-[40px] rounded-[4px]"
                         >

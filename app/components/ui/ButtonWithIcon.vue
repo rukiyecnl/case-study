@@ -2,17 +2,22 @@
     const props = defineProps({
         icon: {
           type: String,
-          required: true,
+          required: false,
         },
     })
+    const emit = defineEmits(['click'])
 </script>
 
 <template>
-  <button class="btn-action" :class="[$attrs.class]">
-    <img :src="icon" class="w-[17px] h-[15px]" />
-    <span class="btn-action__text"> 
-      <slot />
-    </span>
+  <button 
+      @click="emit('click')"
+      class="btn-action" 
+      :class="[$attrs.class]"
+  >
+      <img v-if="icon" :src="icon" class="w-[17px] h-[15px]" />
+      <span class="btn-action__text"> 
+        <slot />
+      </span>
   </button>
 </template>
 
