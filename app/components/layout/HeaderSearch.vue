@@ -1,7 +1,7 @@
 <script setup lang="ts">
     import logo from '~/assets/images/logo.png'
     import search from '~/assets/images/search.png'
-    import basket from '~/assets/images/basket.png'
+    import basketImg from '~/assets/images/basket.png'
     import hamburgerMenu from '~/assets/images/hamburgerMenu.png'
     import MenuModalVue from '../ui/MenuModal.vue'
     import downArrow from '~/assets/images/down.svg'
@@ -9,6 +9,8 @@
     import { ref } from 'vue'
 
     const isOpen = ref(false)
+
+    const basket = useState<any[]>('basket', () => [])
 </script>
 
 <template>
@@ -49,9 +51,18 @@
             </div>
 
             <NuxtLink to="/checkout">
-                <img :src="basket" alt="">
+                <div class="relative">
+                    <div 
+                        class="absolute right-[6px] -top-[3px] w-[16px] h-[16px] 
+                                rounded-full bg-red-600 text-white font-[700]
+                                flex items-center justify-center text-[10px]" 
+                    >
+                        {{ basket.length }}
+                    </div>
+                    <img :src="basketImg" alt="" class="p-2">
+                </div>
             </NuxtLink>
-
+ 
             <button @click="isOpen = true"  class="md:hidden cursor-pointer">
                 <img :src="hamburgerMenu" alt="">
             </button>

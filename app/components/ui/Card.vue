@@ -1,25 +1,24 @@
-<script setup>
+<script setup >
     import basketWhite from '~/assets/images/basketWhite.png'
     import view from '~/assets/images/view.png'
     import ButtonWithIconVue from '~/components/ui/ButtonWithIcon.vue'
     import SpinnerVue from './Spinner.vue'
 
-    defineProps({
-        basket: {
-            type: Array,
-            required: true
-        }
-    })
-
     const emit = defineEmits(['add-basket'])
 
     const { data, pending } = await useProducts()
+
     const loading = ref(true) 
     if (data) { loading.value = false }
 
+    const basket = useState('basket', () => [])
+
+
     const addBasket = (product) => {
-        emit('add-basket', product)
+        basket.value.push(product)
+        console.log(basket.value.length);      
     }
+
 </script>
 <template>
         <SpinnerVue v-if="loading" />
@@ -60,8 +59,19 @@
                             transition-opacity duration-300"
                     >
                         <div class="flex w-full justify-between bg-[#000000CC] py-[12px] px-[16px]">
-                            <ButtonWithIconVue :icon="view" class="xl:px-[16px] md:px-[8px]">Quick View</ButtonWithIconVue>
-                            <ButtonWithIconVue :icon="basketWhite" class="border-l-2 xl:px-[24px] md:px-[8px]">Add</ButtonWithIconVue>
+                            <ButtonWithIconVue 
+                                :icon="view" 
+                                class="xl:px-[16px] md:px-[8px]"
+                            >
+                                Quick View
+                            </ButtonWithIconVue>
+                            <ButtonWithIconVue 
+                                @click="addBasket(product)"
+                                :icon="basketWhite" 
+                                class="border-l-2 xl:px-[24px] md:px-[8px]"
+                            >
+                                Add
+                            </ButtonWithIconVue>
                         </div>
                     </div>
                 </div>

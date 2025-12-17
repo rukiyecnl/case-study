@@ -11,20 +11,13 @@
         layout: 'default'
     })
 
-    const basket = ref([])
-
-    const handleAddBasket = (product) => {
-        basket.value.push(product)
-        console.log(basket.value[0]);
-        
-    }
 </script>
 
 <template>
     <CollectionSlider />
     <div class="my-[40px]">
         <FeaturedTitleActionVue>Featured Products</FeaturedTitleActionVue>
-        <CardVue :basket="basket" @add-basket="handleAddBasket"/>
+        <CardVue />
         <NewsLetterSignUpVue />
         <div>
             <a href="#" class="md:hidden w-full cursor-pointer">
