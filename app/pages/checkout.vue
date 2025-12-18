@@ -16,7 +16,7 @@
             <p class="font-[500] text-[24px]">Checkout</p>
         </div>
     </div>
-    <div class="lg:hidden">
+    <div class="container lg:hidden">
         <CartSummaryVue />
         <ShippingDetailsVue />
         <PaymentDetailsVue />
@@ -29,6 +29,5 @@
         <div class="flex-[1]">
             <CartSummaryVue />
         </div>
-        
     </div>
 </template>

@@ -14,7 +14,7 @@
 <template>
     <div class="bg-[#ECECEC4D] lg:bg-white">
         <TitleWithIconVue :icon="orderHistory">Shipping Details</TitleWithIconVue>
-        <form class="container lg:container-none bg-white">
+        <form class=" bg-white">
 
             <div class="lg:flex justify-between items-center gap-[40px]">
                 <div class="form-div pt-[16px] lg:pt-[0px] flex-[1]">

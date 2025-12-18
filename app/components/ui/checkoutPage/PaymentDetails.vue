@@ -4,18 +4,20 @@
     import TitleWithIconVue from './TitleWithIcon.vue';
     import ButtonVue from '../Button.vue';
 
+    const isValid = ref(false)
+
 </script>
 
 <template>
     <div class="bg-[#ECECEC4D] lg:bg-white">
         <TitleWithIconVue :icon="dollar">Payment Details</TitleWithIconVue>
-        <div class="container lg:container-none flex flex-col lg:flex-row-reverse bg-white py-4 gap-[40px]">
+        <div class="flex flex-col lg:flex-row-reverse justify-between bg-white py-4 gap-[40px]">
             <img 
                 :src="cardContainer" 
-                class="w-full lg:w-[280px]"
+                class="w-full lg:w-[280px] flex-[1]"
                 alt="cardContainer"
             >
-            <form class="container lg:container-none bg-white">
+            <form class="bg-white flex-[1]">
     
                 <div class="form-div pt-[16px]">
                     <label for="cardHolderName">Card Holder Name *</label>
@@ -69,7 +71,7 @@
     
                 <p class="form-detail mb-4">* Required fields</p>
     
-                <ButtonVue size="sm" color="pink" class="w-full mb-[] disabled">PAY NOW</ButtonVue>
+                <ButtonVue :disabled="!isValid" size="sm" color="pink" class="w-full disabled:opacity-40">PAY NOW</ButtonVue>
             </form>
         </div>
     </div>

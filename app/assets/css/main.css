@@ -3,10 +3,7 @@
 @tailwind utilities;
 
 .container{
-    @apply  px-[16px] mx-auto lg:px-[60px];
-}
-.container-none{
-    @apply  px-[0px] ;
+    @apply  px-[16px] mx-auto xl:px-[60px];
 }
 
 .useGradiant{

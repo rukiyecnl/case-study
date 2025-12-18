@@ -10,19 +10,34 @@
             <div 
                 v-for="category in featuredCategories"    
             >
-                <div class="relative" >
+                <div class="relative " >
                     <img 
                         class="w-full h-[232px] lg:h-[280px] object-cover rounded-[6px]"
                         :src="category.image" 
                         alt="featuredCategory"
                     >
-                    <div class="absolute inset-0 flex items-center justify-center ">
-                        <div class="flex justify-center items-center flex-col gap-[8px] bg-[#FFFFFFE5] m-[40px] lg:m-[64px] p-[16px] rounded-[6px]">
-                            <p class="font-[700] text-[20px]">{{ category.title }}</p>
-                            <p class="text-center font-[400] text-[14px]">{{ category.description }}</p>
-                            <ButtonVue size="sm" color="green">BROWSE</ButtonVue>
+                    <div class="absolute inset-0 flex items-center justify-center 
+                                hover:bg-black/20 transition-colors duration-300"
+                    >
+                        <div
+                            class="flex justify-center items-center flex-col gap-[8px]
+                                bg-white/90 m-[40px] lg:m-[64px] p-[16px] rounded-[6px]"
+                        >
+                            <p class="font-[700] text-[20px]">
+                            {{ category.title }}
+                            </p>
+
+                            <p class="text-center font-[400] text-[14px]">
+                            {{ category.description }}
+                            </p>
+
+                            <ButtonVue size="sm" color="green">
+                            BROWSE
+                            </ButtonVue>
                         </div>
+
                     </div>
+
                 </div>
             
 

@@ -8,7 +8,7 @@
 </script>
 
 <template>
-    <div class="container flex gap-4 items-center py-[20px]">
+    <div class="sub-container flex gap-4 items-center py-[20px]">
         <div class="bg-[#ECECEC4D] p-[6px] rounded-[4px] border-[1px] border-[#ECECEC]">
             <img 
                 :src="icon" 
