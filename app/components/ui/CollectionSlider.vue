@@ -9,9 +9,10 @@
 </script>
 
 <template>
-    <div class="useGradiant ">
+    <div class="useGradiant">
         <div class="">
             <Splide
+                class="hero-slider"
                 :options="{
                     type: 'loop',
                     perPage: 1,

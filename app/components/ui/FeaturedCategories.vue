@@ -4,7 +4,7 @@
     const { featuredCategories } = useFeaturedCategories();
 </script>
 <template>
-    <div class="py-[16px] xl:mx-[260px]" >
+    <div class="py-[16px] xl:mx-[220px]" >
         <FeaturedTitleActionVue>Featured Categories</FeaturedTitleActionVue>
         <div class="container grid grid-cols-1 lg:grid-cols-2 gap-[16px]">
             <div 

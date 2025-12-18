@@ -16,12 +16,12 @@
             <p class="font-[500] text-[24px]">Checkout</p>
         </div>
     </div>
-    <div class="container lg:hidden">
+    <div class="container lg:hidden mb-[24px]">
         <CartSummaryVue />
         <ShippingDetailsVue />
         <PaymentDetailsVue />
     </div>
-    <div class="container hidden lg:flex gap-[40px]">
+    <div class="container hidden lg:flex gap-[40px] mb-[24px]">
         <div class="flex-[2]">
             <ShippingDetailsVue />
             <PaymentDetailsVue />

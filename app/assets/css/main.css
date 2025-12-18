@@ -13,3 +13,10 @@
                  rgba(255, 255, 255, 0.72) 52.19%, #F2F0FF 67.81%);
 
 }
+
+.hero-slider .splide__pagination {
+  position: static;
+  margin-top: 8px;
+}
+
+
