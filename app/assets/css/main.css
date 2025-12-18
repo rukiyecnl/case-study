@@ -5,6 +5,9 @@
 .container{
     @apply  px-[16px] mx-auto lg:px-[60px];
 }
+.container-none{
+    @apply  px-[0px] ;
+}
 
 .useGradiant{
     background: linear-gradient(0deg, #F2F0FF, #F2F0FF),

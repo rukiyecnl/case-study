@@ -11,13 +11,16 @@
     const loading = ref(true) 
     if (data) { loading.value = false }
 
-    const basket = useState('basket', () => [])
+    //const basket = useState('basket', () => [])
 
 
-    const addBasket = (product) => {
-        basket.value.push(product)
-        console.log(basket.value.length);      
-    }
+    //const addBasket = (product) => {
+    //    basket.value.push(product)
+    //    console.log(basket.value.length);      
+    //}
+
+    const { basket, addBasket } = useBasket()
+
 
 </script>
 <template>

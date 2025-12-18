@@ -10,7 +10,8 @@
 
     const isOpen = ref(false)
 
-    const basket = useState<any[]>('basket', () => [])
+    const { basket } = useBasket()
+
 </script>
 
 <template>
